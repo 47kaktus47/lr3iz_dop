@@ -14,8 +14,8 @@ from flask_wtf.file import FileField, FileAllowed, FileRequired
 SECRET_KEY = 'secret'
 app.config['SECRET_KEY'] = SECRET_KEY
 app.config['RECAPTCHA_USE_SSL'] = False
-app.config['RECAPTCHA_PUBLIC_KEY'] = '6Lem7C0bAAAAAFb0mjCJ-JvSZOIAJFQ4ZhVnYxDd'
-app.config['RECAPTCHA_PRIVATE_KEY'] = '6Lem7C0bAAAAAHPlZJAjMJdrhuN8twMTBf0ilGIg'
+app.config['RECAPTCHA_PUBLIC_KEY'] = '6Le2kPwcAAAAAAjXJ5YpKnaf1KfO3fLMjVsHDcTI'
+app.config['RECAPTCHA_PRIVATE_KEY'] = '6Le2kPwcAAAAAAgnOBdJG2OEh_c2trx_8wb7AJ9O'
 app.config['RECAPTCHA_OPTIONS'] = {'theme': 'white'}
 
 from flask_bootstrap import Bootstrap
