@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
- return " <html><head></head> <body> Введите в поисковую строку: https://iz3.herokuapp.com/net </body></html>"
+ return " <html><head></head> <body> Введите в поисковую строку: https://lr3iz_dop.herokuapp.com/net </body></html>"
 
 from flask import render_template
 from flask_wtf import FlaskForm,RecaptchaField
@@ -29,7 +29,6 @@ class NetForm(FlaskForm):
  
 from werkzeug.utils import secure_filename
 import os
-import net as neuronet
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
