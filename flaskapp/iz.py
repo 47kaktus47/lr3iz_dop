@@ -46,6 +46,9 @@ def f(filename,openid):
  img1=img0[:,:,0]=0
  img2=img0[:,:,1]=0
  img3=img0[:,:,2]=0
+ img1 = Image.fromarray((img1 * 255).astype(np.uint8))
+ img2 = Image.fromarray((img2 * 255).astype(np.uint8))
+ img3 = Image.fromarray((img3 * 255).astype(np.uint8))
  img1.save('./static/image1.jpg')
  img2.save('./static/image2.jpg')
  img3.save('./static/image3.jpg')
