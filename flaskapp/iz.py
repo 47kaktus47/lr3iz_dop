@@ -42,7 +42,7 @@ def f(filename,openid):
  height = 224
  width = 224
  img1 = Image.open(filename)
- img0= np.array(img.resize((height,width)))/255.0
+ img0= np.array(imag.resize((height,width)))/255.0
  img1=img0[:,:,0]=0
  img2=img0[:,:,1]=0
  img3=img0[:,:,2]=0
