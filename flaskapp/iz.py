@@ -46,9 +46,9 @@ def f(filename,openid):
  img1=img0[:,:,0]=0
  img2=img0[:,:,1]=0
  img3=img0[:,:,2]=0
- img1.save(filename+'1')
- img2.save(filename+'2')
- img3.save(filename+'3')
+ img1.save('./static/image1.jpg')
+ img2.save('./static/image2.jpg')
+ img3.save('./static/image3.jpg')
  if openid==0: 
   a = imag.crop((0, 0, int(y * 0.5), x))
   b = imag.crop((int(y * 0.5), 0, x, y))
@@ -77,7 +77,7 @@ def f(filename,openid):
  plt.savefig(gr_path)
  plt.close()
   
- return output_filename,gr_path,img1,img2,img3
+ return output_filename,gr_path,'./static/image1.jpg','./static/image3.jpg','./static/image2.jpg'
 
 @app.route("/net",methods=['GET', 'POST'])
 def net():
