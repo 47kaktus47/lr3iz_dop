@@ -1,0 +1,75 @@
+﻿
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<!-- задаем заголовок страницы -->
+{% block title %}This is an page{% endblock %}
+<!-- блок body -->
+{% block content %}
+{{ wtf.quick_form(form, method='post',enctype="multipart/form-data", action="net") }}
+
+<table border="1">
+    <tr>
+      
+      <td>Новая картинка</td>
+      <td>График</td>
+    </tr>
+    <tr>
+    
+      <td>
+        {% if image_name %}
+        <p>{{image_name}}
+        <p><img src={{image_name}}/>
+        {% else %}
+        <p> There is no image yet </p>
+        {% endif %}
+    </td>
+
+    <td>
+        {% if gr_name %}
+        <p>{{gr_name}}
+        <p><img src={{gr_name}}/>
+        {% else %}
+        <p> There is no image yet </p>
+        {% endif %}
+    </td>
+    </tr>
+    
+  </table>
+
+<table border="1">
+    <tr>
+      <td>Новая картинка1</td>
+      <td>Новая картинка2</td>
+      <td>Новая картинка3</td>
+    </tr>
+    <tr>
+    
+      <td>
+        {% if im1 %}
+        <p>{{im1}}
+        <p><img src={{im1}}/>
+        {% else %}
+        <p> There is no image yet </p>
+        {% endif %}
+    </td>
+
+    <td>
+        {% if im2 %}
+        <p>{{im2}}
+        <p><img src={{im2}}/>
+        {% else %}
+        <p> There is no image yet </p>
+        {% endif %}
+    </td>
+     <td>
+        {% if im3 %}
+        <p>{{im3}}
+        <p><img src={{im3}}/>
+        {% else %}
+        <p> There is no image yet </p>
+        {% endif %}
+    </td>
+    </tr>
+    
+  </table>
+{% endblock %}
