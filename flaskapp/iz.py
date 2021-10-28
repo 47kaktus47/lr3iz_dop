@@ -41,14 +41,18 @@ def f(filename,openid):
  openid=int(openid)
  height = 224
  width = 224
- img0 = Image.open(filename)
- img0= np.array(img0.resize((height,width)))/255.0
- imag1=img0[:,:,0]=0
- imag2=img0[:,:,1]=0
- imag3=img0[:,:,2]=0
- img1 = Image.fromarray((imag1 * 255).astype(np.uint8))
- img2 = Image.fromarray((imag2 * 255).astype(np.uint8))
- img3 = Image.fromarray((imag3 * 255).astype(np.uint8))
+ img1 = Image.open(filename)
+ img2 = Image.open(filename)
+ img3 = Image.open(filename)
+ img1= np.array(img1.resize((height,width)))/255.0
+ img2= np.array(img2.resize((height,width)))/255.0
+ img3= np.array(img3.resize((height,width)))/255.0
+ img1[:,:,0]=0
+ img2[:,:,1]=0
+ img3[:,:,2]=0
+ img1 = Image.fromarray((img1 * 255).astype(np.uint8))
+ img2 = Image.fromarray((img2 * 255).astype(np.uint8))
+ img3 = Image.fromarray((img3 * 255).astype(np.uint8))
  img1.save('./static/image1.jpg')
  img2.save('./static/image2.jpg')
  img3.save('./static/image3.jpg')
