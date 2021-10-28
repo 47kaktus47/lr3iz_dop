@@ -91,8 +91,6 @@ def net():
  
  if form.validate_on_submit():
   filename = os.path.join('./static', secure_filename(form.upload.data.filename))
-  fcount,fimage=neuronet.read_image_files(10,'./ststic')
-  
   ch=form.openid.data
   newfilename,grname,img1,img2,img3 = f(filename,ch)
   
